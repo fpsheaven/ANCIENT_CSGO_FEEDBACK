@@ -8,3 +8,5 @@ The files will be sent to the devs as a pack so that they have easier time gathe
 My free FTP server will be alive for 3 days for file gathering. If anyone knows a good and cheap FTP server services,please DM me on twitter.
 
 The source code will be released,but the server credentials will be wipped out from this repo for obvious reasons.
+
+If the util wont respond,or has issues,the free upload space has been filled or the trial has run out.I will update the source code when i get a new ftp server.
