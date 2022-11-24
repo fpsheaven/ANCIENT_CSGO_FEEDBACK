@@ -1,7 +1,6 @@
 import os,sys,datetime,paramiko,shutil,webbrowser
 path="C:\\frequencycs"
-if os.path.isdir(path)==1:
-    shutil.rmtree(path)
+
 
 date=str(datetime.date.today())
 os.mkdir("C:\\frequencycs");os.chdir("C:\\frequencycs");
