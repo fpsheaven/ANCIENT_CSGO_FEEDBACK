@@ -1,4 +1,7 @@
 # ANCIENT_CSGO_FEEDBACK
+
+PROJECT PAUSED. FOR NOW DUE TO SERVER ISSUES.IT WILL BE RESUMED SHORTLY
+
 Gathers msinfo32 files from users with extremely low fps only in ancient and uploads it to a server
 
 Ancient has caused major issues for CSGO players even with really good PCs.This utility will gather the PC info and upload it to my server.
