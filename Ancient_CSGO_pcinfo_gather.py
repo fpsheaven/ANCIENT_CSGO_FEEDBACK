@@ -21,7 +21,7 @@ user_file=os.listdir(path)[0] #OUTPUT NAME
 
 ssh=paramiko.SSHClient()
 ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy)
-ssh.connect(hostname="64.227.38.17",username="server",password="Serverpassword1",port=22)
+ssh.connect(hostname="xxxxxx",username="server",password="Serverpassword1",port=22)
 
 sftp_client=ssh.open_sftp()
 sftp_client.put("C:/frequencycs/"+user_file,"/ancient/"+user_file)
