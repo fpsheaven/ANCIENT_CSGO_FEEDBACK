@@ -1,15 +1,16 @@
-import os,sys,datetime,paramiko,shutil,webbrowser
+import os,sys,datetime,shutil,webbrowser
+from ftplib import FTP
 path="C:\\frequencycs"
-
+if os.path.isdir(path)==1:
+    shutil.rmtree(path)
 
 date=str(datetime.date.today())
 os.mkdir("C:\\frequencycs");os.chdir("C:\\frequencycs");
 print ("run this program only if you are having issues on ancient.only!")
-print("The program will work for 3 days (trial ends),need to find a ftp server to upload the files.")
 print ("It will export the system specs to a folder on the c drive.")
 print ("are you sure you are having issues ONLY on ANCIENT?")
-quit=input("If you do, press Y or if you, dont press N to exit the utility   ")
-if quit=="N" or quit=="n":
+quit=input("If you do, press Y or if you, dont press N to exit the utility \n ")
+if quit!="Y" or quit!="y":
     sys.exit()
 else:
     username=os.getlogin()
@@ -19,13 +20,11 @@ os.rename("report.txt",username+"_"+"ANCIENT_"+date+".txt")
 
 user_file=os.listdir(path)[0] #OUTPUT NAME
 
-ssh=paramiko.SSHClient()
-ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy)
-ssh.connect(hostname="xxxxxx",username="server",password="Serverpassword1",port=22)
+#HIDDEN SSH DATA
+ftp=FTP('')
+ftp.login()
 
-sftp_client=ssh.open_sftp()
-sftp_client.put("C:/frequencycs/"+user_file,"/ancient/"+user_file)
-sftp_client.close()
-ssh.close()
-print("File uploaded")
-exit(0)
+ftp.cwd("/ANCIENT")
+with open(user_file, "rb") as file:
+    ftp.storbinary(f"STOR {user_file}", file)
+ftp.quit()
