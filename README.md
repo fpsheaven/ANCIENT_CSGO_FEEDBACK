@@ -10,4 +10,5 @@ The files will be sent to the devs as a pack so that they have easier time gathe
 The source code will be released,but the server credentials will be wipped out from this repo for obvious reasons.
 
 
-<DEPRECATED> <DEPRECATED>
+DEPRECATED PROJECT. SERVED ITS PURPOSE.
+DEPRECATED PROJECT. SERVED ITS PURPOSE.
